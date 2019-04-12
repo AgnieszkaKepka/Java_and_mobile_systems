@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Controller">
+   <children>
+      <Separator fx:id="sep_left" layoutX="185.0" layoutY="100.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="0.0" />
+      <Separator fx:id="sep_rigth" orientation="VERTICAL" prefHeight="400.0" prefWidth="13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="0.0" />
+      <Separator fx:id="sep_button" layoutX="208.0" layoutY="378.0" prefHeight="104.0" prefWidth="195.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="208.0" AnchorPane.topAnchor="378.0" />
+      <Button fx:id="btn" layoutX="240.0" layoutY="434.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="134.0" text="Add new task" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="226.0" AnchorPane.topAnchor="434.0" />
+      <ListView fx:id="toDoList" layoutX="22.0" layoutY="81.0" prefHeight="320.0" prefWidth="156.0">
+         <contextMenu>
+            <ContextMenu fx:id="menu">
+              <items>
+                <MenuItem fx:id="DeleteTODO" mnemonicParsing="false" text="Delete" />
+                  <MenuItem fx:id="EditTODO" mnemonicParsing="false" text="Edit" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+      <ListView fx:id="done" layoutX="424.0" layoutY="81.0" prefHeight="320.0" prefWidth="156.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="DeleteDONE" mnemonicParsing="false" text="Delete" />
+                  <MenuItem fx:id="EditDONE" mnemonicParsing="false" text="Edit" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+      <ListView fx:id="progress" layoutX="219.0" layoutY="81.0" prefHeight="320.0" prefWidth="173.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="DeleteINPROGRESS" mnemonicParsing="false" text="Delete" />
+                  <MenuItem fx:id="EditINPROGRESS" mnemonicParsing="false" text="Edit" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+      <Label layoutX="77.0" layoutY="14.0" text="TO DO" />
+      <Label layoutX="261.0" layoutY="14.0" text="IN PROGRESS" />
+      <Label layoutX="481.0" layoutY="14.0" text="DONE" />
+   </children>
+</AnchorPane>
